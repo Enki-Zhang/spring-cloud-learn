@@ -1,6 +1,7 @@
 package cn.itcast.order.pojo;
 
 import lombok.Data;
+import user.User;
 
 @Data
 public class Order {
@@ -10,4 +11,5 @@ public class Order {
     private Integer num;
     private Long userId;
     private User user;
+
 }

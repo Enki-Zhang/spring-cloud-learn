@@ -12,11 +12,11 @@
     <artifactId>order-service</artifactId>
 
     <dependencies>
-<!--feigin-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
+<!--&lt;!&ndash;feigin&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-openfeign</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
