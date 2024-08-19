@@ -13,3 +13,16 @@ spring:
           uri: lb://userservice # 路由的目标地址 lb就是负载均衡，后面跟服务名称
           predicates: # 路由断言，也就是判断请求是否符合路由规则的条件
             - Path=/user/** # 这个是按照路径匹配，只要以/user/开头就符合要求 发送到user-service的uri中
+          #            - Path=/order/** # 这个是按照路径匹配，只要以/order/开头就符合要求 发送到order-service的uri中
+          filters: # 过滤器，可以对请求进行一些处理
+            - name: AddRequestHeader
+              args:
+                name: Route-Filter
+                value: Applied
+          default-filters:
+            - name: AddRequestHeaderWithDefault
+              args:
+                name: Default-Filter
+                value: Applied
+      globalcors:
+        cors-configurations:
